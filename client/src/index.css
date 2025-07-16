@@ -1,0 +1,418 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --background: hsl(215, 28%, 17%);
+  --foreground: hsl(213, 31%, 91%);
+  --muted: hsl(215, 13%, 15%);
+  --muted-foreground: hsl(218, 11%, 65%);
+  --popover: hsl(215, 28%, 17%);
+  --popover-foreground: hsl(213, 31%, 91%);
+  --card: hsl(215, 28%, 17%);
+  --card-foreground: hsl(213, 31%, 91%);
+  --border: hsl(215, 14%, 34%);
+  --input: hsl(215, 14%, 34%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(215, 13%, 15%);
+  --secondary-foreground: hsl(213, 31%, 91%);
+  --accent: hsl(215, 13%, 15%);
+  --accent-foreground: hsl(213, 31%, 91%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(60, 9%, 98%);
+  --ring: hsl(207, 90%, 54%);
+  --radius: 0.5rem;
+  
+  /* Custom AI OS colors */
+  --ai-blue: hsl(207, 90%, 54%);
+  --ai-purple: hsl(262, 83%, 58%);
+  --ai-green: hsl(142, 76%, 36%);
+  --ai-amber: hsl(43, 96%, 56%);
+  --ai-red: hsl(0, 84%, 60%);
+  --ai-violet: hsl(262, 83%, 58%);
+  --ai-emerald: hsl(142, 76%, 36%);
+  
+  /* Glassmorphism effects */
+  --glass-bg: hsla(215, 28%, 17%, 0.95);
+  --glass-border: hsla(215, 14%, 34%, 0.5);
+  --glass-shadow: hsla(215, 28%, 0%, 0.3);
+}
+
+.dark {
+  --background: hsl(215, 28%, 17%);
+  --foreground: hsl(213, 31%, 91%);
+  --muted: hsl(215, 13%, 15%);
+  --muted-foreground: hsl(218, 11%, 65%);
+  --popover: hsl(215, 28%, 17%);
+  --popover-foreground: hsl(213, 31%, 91%);
+  --card: hsl(215, 28%, 17%);
+  --card-foreground: hsl(213, 31%, 91%);
+  --border: hsl(215, 14%, 34%);
+  --input: hsl(215, 14%, 34%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(215, 13%, 15%);
+  --secondary-foreground: hsl(213, 31%, 91%);
+  --accent: hsl(215, 13%, 15%);
+  --accent-foreground: hsl(213, 31%, 91%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(213, 31%, 91%);
+  --ring: hsl(207, 90%, 54%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px var(--glass-shadow);
+  }
+  
+  .glass-light {
+    background: hsla(215, 28%, 17%, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid hsla(215, 14%, 34%, 0.3);
+  }
+  
+  .ai-glow {
+    box-shadow: 0 0 20px hsla(207, 90%, 54%, 0.3);
+  }
+  
+  .ai-glow-purple {
+    box-shadow: 0 0 20px hsla(262, 83%, 58%, 0.3);
+  }
+  
+  .ai-glow-green {
+    box-shadow: 0 0 20px hsla(142, 76%, 36%, 0.3);
+  }
+  
+  .window-shadow {
+    box-shadow: 0 25px 50px -12px hsla(215, 28%, 0%, 0.25);
+  }
+  
+  .terminal-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  .bg-desktop {
+    background-image: url('https://pixabay.com/get/gb2175a93ce57e5207a9a0611774c8c5cdff0791e16ab60562a62d491c3ca94c27cc6b49e18c9a80e84e6fed3ce01aa032cdf2f846902a5e7258f202b8251ce1e_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .bg-desktop::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: hsla(215, 28%, 17%, 0.7);
+    z-index: -1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-foreground);
+}
+
+/* Animation classes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px hsla(207, 90%, 54%, 0.3); }
+  50% { box-shadow: 0 0 30px hsla(207, 90%, 54%, 0.5); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-glow {
+  animation: glow 2s infinite;
+}
+
+/* Terminal specific styles */
+.terminal-cursor {
+  background: var(--ai-green);
+  animation: pulse 1s infinite;
+}
+
+.terminal-output {
+  white-space: pre-wrap;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Code editor styles */
+.code-editor {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.code-line-number {
+  color: var(--muted-foreground);
+  user-select: none;
+  text-align: right;
+  padding-right: 8px;
+  border-right: 1px solid var(--border);
+}
+
+.code-suggestion {
+  background: hsla(262, 83%, 58%, 0.1);
+  border: 1px solid hsla(262, 83%, 58%, 0.3);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  position: absolute;
+  z-index: 10;
+}
+
+/* File manager styles */
+.file-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.file-item:hover {
+  background: hsla(215, 14%, 34%, 0.3);
+}
+
+.file-item.selected {
+  background: hsla(207, 90%, 54%, 0.2);
+  border: 1px solid hsla(207, 90%, 54%, 0.5);
+}
+
+/* Window controls */
+.window-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.window-control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.window-control:hover {
+  opacity: 0.8;
+}
+
+.window-control.close {
+  background: var(--ai-red);
+}
+
+.window-control.minimize {
+  background: var(--ai-amber);
+}
+
+.window-control.maximize {
+  background: var(--ai-green);
+}
+
+/* System monitor styles */
+.metric-bar {
+  height: 8px;
+  background: var(--muted);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.metric-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.metric-fill.cpu {
+  background: var(--ai-green);
+}
+
+.metric-fill.memory {
+  background: var(--ai-blue);
+}
+
+.metric-fill.neural {
+  background: var(--ai-purple);
+}
+
+/* Chat styles */
+.chat-message {
+  max-width: 80%;
+  margin-bottom: 16px;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+}
+
+.chat-message.assistant {
+  align-self: flex-start;
+}
+
+.chat-bubble {
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.chat-bubble.user {
+  background: var(--ai-blue);
+  color: white;
+}
+
+.chat-bubble.assistant {
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+/* App launcher styles */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 24px;
+  padding: 24px;
+}
+
+.app-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.app-item:hover {
+  background: hsla(215, 14%, 34%, 0.3);
+  transform: translateY(-2px);
+}
+
+.app-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.app-name {
+  font-size: 12px;
+  text-align: center;
+  color: var(--foreground);
+}
+
+/* Taskbar styles */
+.taskbar-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.taskbar-item:hover {
+  background: hsla(215, 14%, 34%, 0.5);
+}
+
+.taskbar-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: var(--ai-blue);
+  border-radius: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .desktop-window {
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 0 !important;
+  }
+  
+  .app-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .taskbar-item {
+    width: 36px;
+    height: 36px;
+  }
+}
