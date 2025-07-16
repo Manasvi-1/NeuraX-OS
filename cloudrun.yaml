@@ -1,0 +1,14 @@
+name: "AI OS Backend"
+description: "Deploy AI OS backend to Cloud Run"
+project: YOUR_GCP_PROJECT_ID
+region: us-central1
+source:
+  repository: https://github.com/Manasvi-1/ai-os
+  dir: server
+env:
+  - name: DATABASE_URL
+    description: PostgreSQL connection string
+  - name: OPENAI_API_KEY
+    description: OpenAI API Key
+  - name: SESSION_SECRET
+    description: Session secret for authentication
