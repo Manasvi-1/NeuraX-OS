@@ -208,6 +208,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Manasvi Gowda P** - Full-stack developer passionate about creating innovative solutions that bridge the gap between artificial intelligence and traditional computing paradigms.
 
+[![Deploy to Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run/?git_repo=https://github.com/Manasvi-1/ai-os&dir=server)
+
+
 ---
 
 <div align="center">
