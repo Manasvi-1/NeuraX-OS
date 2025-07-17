@@ -6,7 +6,7 @@
 ![Auth](https://img.shields.io/badge/Auth-OAuth%20%7C%20Replit-orange?style=flat-square&logo=replit&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)
 <div align="center">
-  <img src="./assets/07959AB8-A059-402D-97F6-D28C16B707B1.png" alt="AI OS 07959AB8-A059-402D-97F6-D28C16B707B1" style="max-width: 100%; border-radius: 8px;" />
+  <img src="./07959AB8-A059-402D-97F6-D28C16B707B1.png" alt="AI OS 07959AB8-A059-402D-97F6-D28C16B707B1" style="max-width: 100%; border-radius: 8px;" />
 </div>
 
 
