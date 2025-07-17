@@ -1,14 +1,25 @@
-name: "AI OS Backend"
-description: "Deploy AI OS backend to Cloud Run"
-project: YOUR_GCP_PROJECT_ID
-region: us-central1
-source:
-  repository: https://github.com/Manasvi-1/ai-os
-  dir: server
-env:
-  - name: DATABASE_URL
-    description: PostgreSQL connection string
-  - name: OPENAI_API_KEY
-    description: OpenAI API Key
-  - name: SESSION_SECRET
-    description: Session secret for authentication
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    dir: 'server'
+    args: ['install']
+
+  - name: 'gcr.io/cloud-builders/npm'
+    dir: 'server'
+    args: ['run', 'build']
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      [
+        'run', 'deploy', 'ai-os-backend',
+        '--region', 'us-central1',
+        '--source', 'server',
+        '--project', 'YOUR_GCP_PROJECT_ID',
+        '--allow-unauthenticated',
+        '--set-env-vars',
+        'DATABASE_URL=$(DATABASE_URL),OPENAI_API_KEY=$(OPENAI_API_KEY),SESSION_SECRET=$(SESSION_SECRET)'
+      ]
+
+substitutions:
+  _DATABASE_URL: YOUR_DB_URL
+  _OPENAI_API_KEY: YOUR_API_KEY
+  _SESSION_SECRET: YOUR_SECRET
