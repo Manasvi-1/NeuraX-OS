@@ -6,220 +6,209 @@
 ![Auth](https://img.shields.io/badge/Auth-OAuth%20%7C%20Replit-orange?style=flat-square&logo=replit&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)
 
+## 🚀 Overview
 
+AI OS is a sophisticated full-stack web application that simulates a complete Linux-like desktop environment enhanced with cutting-edge artificial intelligence capabilities. This project showcases how AI can revolutionize traditional operating system interactions, making complex tasks intuitive and accessible through natural language processing.
 
-⸻
+### 🎯 Vision
 
-🧠 Overview
+This project demonstrates the potential future of operating systems where artificial intelligence seamlessly integrates with traditional computing paradigms, creating a more intuitive, efficient, and powerful user experience.
 
-AI OS is a full-stack, web-based desktop environment that replicates a Linux-style interface—supercharged with next-gen artificial intelligence.
+## ✨ Key Features
 
-It demonstrates how traditional operating systems can evolve by integrating AI, enabling users to interact via natural language and intuitive controls. From coding to file management, AI OS delivers an immersive and intelligent computing experience.
+### 🖥️ Desktop Environment
+- **Multi-Window System**: Full-featured window manager with draggable, resizable windows
+- **Linux-Style Interface**: Authentic desktop experience with taskbar and system tray
+- **Real-time System Monitoring**: Live performance metrics and resource usage
+- **Responsive Design**: Optimized for various screen sizes and devices
 
-⸻
+### 🤖 AI-Powered Components
 
-🌟 Vision
+#### 🔧 AI Terminal
+- **Natural Language Processing**: Convert plain English commands to bash operations
+- **Command Interpretation**: Intelligent understanding of user intent
+- **Real-time Execution**: Seamless translation and execution of system commands
+- **Context Awareness**: Maintains command history and environmental context
 
-To reimagine the desktop experience by merging traditional OS functionality with powerful AI—bridging natural language with computing tasks and making digital environments more intuitive and accessible for all.
+#### 💬 AI Assistant
+- **Conversational Interface**: Natural dialogue for system help and guidance
+- **System Integration**: Deep understanding of the OS environment
+- **Problem Solving**: Intelligent troubleshooting and optimization suggestions
+- **Learning Capabilities**: Adapts to user patterns and preferences
 
-⸻
+#### 📁 Intelligent File Management
+- **AI-Powered Search**: Semantic file search with relevance ranking
+- **Content Analysis**: Automatic file categorization and insights
+- **Smart Organization**: Intelligent folder structure recommendations
+- **Predictive Navigation**: Anticipates user file access patterns
 
-✨ Core Features
+#### 💻 AI Code Editor
+- **Real-time Code Analysis**: Instant syntax checking and error detection
+- **Intelligent Suggestions**: Context-aware code completion and improvements
+- **Multi-language Support**: Comprehensive programming language coverage
+- **Performance Optimization**: Code quality analysis and enhancement recommendations
 
-🖥️ Desktop Environment
-	•	Multi-window Support – Draggable, resizable windows with layered window management
-	•	Linux-style UI – A familiar, sleek desktop interface with taskbar, system tray, and dock
-	•	Live System Monitoring – Real-time CPU, memory, and performance metrics
-	•	Responsive Design – Seamlessly works across desktops, tablets, and modern browsers
+### 🔐 Security & Access Control
+- **OAuth Authentication**: Secure login via Replit Auth
+- **Permission-based Access**: Granular user permission management
+- **Session Management**: Secure, persistent user sessions
+- **Data Protection**: Encrypted data storage and transmission
 
-🤖 AI-Enhanced Functionality
+### 🌐 Real-time Communication
+- **WebSocket Integration**: Live system updates and notifications
+- **Multi-user Support**: Collaborative environment capabilities
+- **Instant Synchronization**: Real-time file and system state updates
+- **Performance Streaming**: Live system metrics broadcasting
 
-🔧 AI Terminal
-	•	Convert plain English into shell commands
-	•	Execute real-time tasks with intelligent parsing
-	•	Maintains command history and environment state
-	•	Context-aware command suggestions
+## 🏗️ Technical Architecture
 
-💬 AI Assistant
-	•	Conversational interface for help and optimization
-	•	Deep integration with OS functions
-	•	Intelligent suggestions based on behavior and activity
-	•	Continuously learns user preferences
+### Frontend Stack
+- **React 18** with TypeScript for type-safe development
+- **Vite** for lightning-fast development and optimized builds
+- **Tailwind CSS** with custom design system
+- **Radix UI** primitives for accessible component foundation
+- **TanStack Query** for efficient server state management
+- **Wouter** for lightweight client-side routing
 
-📁 Smart File Manager
-	•	Semantic file search with ranking and relevance
-	•	Auto-categorization and file insights
-	•	Predictive folder navigation based on usage
-	•	Drag & drop UI with real-time AI assistance
+### Backend Infrastructure
+- **Node.js** with Express.js for robust server architecture
+- **PostgreSQL** with Drizzle ORM for reliable data persistence
+- **OpenAI API** integration for advanced AI capabilities
+- **WebSocket** server for real-time bidirectional communication
+- **Session Management** with PostgreSQL-backed storage
 
-💻 AI Code Editor
-	•	Syntax-aware code suggestions in real-time
-	•	Error detection, linting, and auto-fixes
-	•	Multi-language support out-of-the-box
-	•	AI-driven performance and quality insights
+### AI Integration
+- **OpenAI GPT-4** for natural language processing
+- **Command Interpretation Engine** for bash translation
+- **Semantic Search** for intelligent file discovery
+- **Code Analysis** for development assistance
+- **System Optimization** for performance enhancement
 
-🔐 Security & Access
-	•	Secure OAuth login (via Replit Auth)
-	•	Session and permission management
-	•	Encrypted data storage and transmission
+## 🚀 Getting Started
 
-🌐 Real-time Collaboration
-	•	WebSocket-based live system updates
-	•	Instant sync across devices
-	•	Multi-user collaboration support
-	•	Streamed metrics and logs in real-time
+### Prerequisites
+- Node.js 18+ 
+- PostgreSQL database
+- OpenAI API key
+- Modern web browser with WebSocket support
 
-⸻
+### Installation
 
-🏗️ Architecture
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/manasvi-gowda/ai-os.git
+   cd ai-os
+   ```
 
-🔧 Frontend
-	•	React 18 + TypeScript – Scalable, type-safe UI
-	•	Vite – Fast builds and dev server
-	•	Tailwind CSS – Utility-first styling
-	•	Radix UI – Accessible, composable components
-	•	TanStack Query – Robust server state handling
-	•	Wouter – Lightweight routing
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-🛠️ Backend
-	•	Node.js + Express – Flexible and scalable API layer
-	•	PostgreSQL + Drizzle ORM – Type-safe DB and migrations
-	•	OpenAI API – Natural language processing and AI capabilities
-	•	WebSockets – Live updates and interactions
-	•	Session Store – Secure, persistent login state
+3. **Environment Configuration**
+   Create a `.env` file with the following variables:
+   ```env
+   DATABASE_URL=your_postgresql_connection_string
+   OPENAI_API_KEY=your_openai_api_key
+   SESSION_SECRET=your_session_secret
+   REPLIT_DOMAINS=your_domain
+   ```
 
-🧠 AI Integration
-	•	GPT-4 for natural dialogue and code understanding
-	•	Custom NLP Parser to convert commands
-	•	Semantic Search engine for smart file navigation
-	•	Code Analysis Engine for developer productivity
-	•	System Intelligence Layer for auto-tuning performance
+4. **Database Setup**
+   ```bash
+   npm run db:push
+   ```
 
-⸻
+5. **Start the application**
+   ```bash
+   npm run dev
+   ```
 
-🚀 Getting Started
+6. **Access the application**
+   Open your browser to `http://localhost:5000`
 
-✅ Prerequisites
-	•	Node.js v18+
-	•	PostgreSQL
-	•	OpenAI API Key
-	•	Modern web browser
+## 📖 Usage Guide
 
-⚙️ Installation
+### Authentication
+1. Navigate to the application URL
+2. Click "Login" to authenticate via OAuth
+3. Access your personalized desktop environment
 
-	1.	Clone the repository
+### AI Terminal Usage
+```bash
+# Natural language commands
+"show me all text files"
+"create a new folder called projects"
+"find files modified today"
+"compress the documents folder"
+```
 
-git clone https://github.com/manasvi-gowda/ai-os.git
-cd ai-os
+### AI Assistant Features
+- Type questions in natural language
+- Get system help and guidance
+- Receive optimization suggestions
+- Access contextual documentation
 
+### File Management
+- Drag and drop file operations
+- AI-powered search with semantic understanding
+- Intelligent file categorization
+- Real-time collaboration capabilities
 
-	2.	Install dependencies
+## 🛠️ Development
 
-npm install
-
-
-	3.	Configure environment
-Create a .env file:
-
-DATABASE_URL=your_postgresql_connection_string
-OPENAI_API_KEY=your_openai_api_key
-SESSION_SECRET=your_session_secret
-REPLIT_DOMAINS=your_domain
-
-
-	4.	Push DB schema
-
-npm run db:push
-
-
-	5.	Run the application
-
-npm run dev
-
-
-	6.	Open in browser
-Go to http://localhost:5000
-
-⸻
-
-💡 Usage Guide
-
-🔐 Authentication
-	•	Login via OAuth to access a personal desktop instance
-
-🧑‍💻 AI Terminal Examples
-
-"list all PDFs"
-"create folder called 'Projects'"
-"show recently modified files"
-"zip the images directory"
-
-🤖 AI Assistant
-	•	Ask for help: “How do I optimize memory usage?”
-	•	Get suggestions for system performance
-	•	Ask AI to explain code or errors
-	•	Request guidance with commands or features
-
-📂 File Manager
-	•	Use AI search: “Find my presentation from last week”
-	•	Let AI organize files into folders
-	•	Collaborate and sync files in real-time
-
-⸻
-
-🛠 Development
-
-📁 Project Structure
-
+### Project Structure
+```
 ai-os/
-├── client/                 # Frontend (React)
-│   ├── components/         # Reusable UI
-│   ├── pages/              # Screens & views
-│   ├── hooks/              # Custom React hooks
-│   └── lib/                # Utilities
-├── server/                 # Backend (Node.js)
-│   ├── routes.ts           # API routes
-│   ├── storage.ts          # DB logic
-│   ├── aiService.ts        # OpenAI integrations
-│   └── index.ts            # Entry point
-├── shared/                 # Shared TS types
-└── database/               # Schema & migrations
+├── client/                 # React frontend application
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── pages/         # Application pages
+│   │   ├── hooks/         # Custom React hooks
+│   │   └── lib/           # Utility functions
+├── server/                 # Node.js backend
+│   ├── routes.ts          # API endpoint definitions
+│   ├── storage.ts         # Database operations
+│   ├── aiService.ts       # AI integration logic
+│   └── index.ts           # Server entry point
+├── shared/                 # Shared TypeScript types
+└── database/              # Database schema and migrations
+```
 
-⚙️ Core Tech Stack
-	•	React + TypeScript
-	•	Drizzle ORM + PostgreSQL
-	•	OpenAI API (GPT-4)
-	•	WebSockets for real-time
-	•	Tailwind CSS + Radix UI
+### Key Technologies
+- **TypeScript** for type safety across the full stack
+- **Drizzle ORM** for database operations and migrations
+- **OpenAI API** for advanced AI capabilities
+- **WebSocket** for real-time communication
+- **React Query** for server state management
 
-⸻
+## 🤝 Contributing
 
-🤝 Contributing
+This project represents a vision for the future of operating systems. Contributions are welcome to help realize this vision:
 
-We welcome contributions to push the boundaries of AI OS:
-	1.	Fork this repo
-	2.	Create a new branch (git checkout -b feature/amazing-feature)
-	3.	Commit your changes (git commit -m 'Add amazing feature')
-	4.	Push and open a Pull Request 🎉
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-⸻
+## 📄 License
 
-📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Licensed under the MIT License. See LICENSE for details.
+## 👨‍💻 About the Developer
 
-⸻
+**Manasvi Gowda P** - Full-stack developer passionate about creating innovative solutions that bridge the gap between artificial intelligence and traditional computing paradigms.
 
-👨‍💻 About the Developer
+[![Deploy to Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run/?git_repo=https://github.com/Manasvi-1/ai-os&dir=server)
 
-Manasvi Gowda P
-Full-stack developer passionate about building intelligent systems that bridge AI and human interaction.
-![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)
 
-⸻
-
+---
 
 <div align="center">
-  <p>⭐ If you find this project inspiring, star it and share it!</p>
-  <p>Made with ❤️ by Manasvi Gowda P</p>
+  <p>⭐ Star this repository if you find it interesting!</p>
+  <p>Built with ❤️ by Manasvi Gowda P</p>
 </div>
+
+
+
