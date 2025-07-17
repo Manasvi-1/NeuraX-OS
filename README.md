@@ -106,6 +106,7 @@ To reimagine the desktop experience by merging traditional OS functionality with
 	•	Modern web browser
 
 ⚙️ Installation
+
 	1.	Clone the repository
 
 git clone https://github.com/manasvi-gowda/ai-os.git
