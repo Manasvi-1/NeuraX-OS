@@ -5,6 +5,10 @@
 ![Stack](https://img.shields.io/badge/Full--Stack-TypeScript%20%7C%20React%20%7C%20Node--js-blue?style=flat-square&logo=typescript)
 ![Auth](https://img.shields.io/badge/Auth-OAuth%20%7C%20Replit-orange?style=flat-square&logo=replit&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)
+<div align="center">
+  <img src="./assets/promo.png" alt="AI OS Promo" style="max-width: 100%; border-radius: 8px;" />
+</div>
+
 
 ## 🚀 Overview
 
