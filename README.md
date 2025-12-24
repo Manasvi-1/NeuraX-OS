@@ -52,7 +52,7 @@ This project demonstrates the potential future of operating systems where artifi
 - **Performance Optimization**: Code quality analysis and enhancement recommendations
 
  Security & Access Control
-- **OAuth Authentication**: Secure login via Replit Auth
+- **OAuth Authentication**: Secure login via Application Auth
 - **Permission-based Access**: Granular user permission management
 - **Session Management**: Secure, persistent user sessions
 - **Data Protection**: Encrypted data storage and transmission
